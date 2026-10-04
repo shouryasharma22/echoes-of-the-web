@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07151d">
+  <meta name="description" content="Swing through a fractured web-city and restore the Aether Core.">
+  <title>Silicon Maze: Echoes of the Web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="game-shell" aria-label="Silicon Maze game">
+    <canvas id="game" aria-label="Game view. Use keyboard controls to move and swing."></canvas>
+    <header class="hud" id="hud" aria-live="polite">
+      <div class="hud-brand"><span class="brand-mark">S/M</span><div><strong>SILICON MAZE</strong><small>ECHOES OF THE WEB</small></div></div>
+      <div class="hud-readout"><span class="fragment-icon">◆</span><span id="fragment-count">FRAGMENTS 0/6</span></div>
+      <div class="objective"><small>CURRENT OBJECTIVE</small><strong id="objective-text">Reach the generator beyond the broken bridge.</strong></div>
+      <button class="icon-button hud-menu" id="menu-button" title="Menu (Esc)" aria-label="Open menu">☰</button>
+    </header>
+    <div class="hud-bottom"><span id="zone-label">NEON DOCKS</span><span id="prompt" role="status"></span><span class="hud-hints">J JOURNAL&nbsp;&nbsp; · &nbsp;&nbsp;ESC MENU</span></div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <section id="dialogue" class="overlay intro" aria-label="Opening story">
+      <div class="story-line">FIELD NOTE 01 <span>· AETHER DISTRICT</span></div>
+      <h1>Silicon Maze<span>:</span><br><em>Echoes of the Web</em></h1>
+      <p>A surge fractured the Aether Core. Its six fragments fell across the city, and the bridges between districts went dark.</p>
+      <p>You are the newest web-slinger on the line. Reconnect the generators, recover the fragments, and bring the city back online.</p>
+      <button id="begin-button" class="primary-button">ENTER THE CITY <span>→</span></button>
+      <small class="intro-foot">A / D MOVE&nbsp;&nbsp; · &nbsp;&nbsp;SPACE JUMP&nbsp;&nbsp; · &nbsp;&nbsp;CLICK TO WEB</small>
+    </section>
+    <section id="panel" class="overlay panel" hidden aria-modal="true" role="dialog" aria-labelledby="panel-title">
+      <div class="panel-top"><span class="story-line" id="panel-kicker">CITY SYSTEMS</span><button id="close-panel" class="icon-button" aria-label="Close">×</button></div>
+      <h2 id="panel-title">Paused</h2>
+      <div id="panel-content"></div>
+    </section>
+    <section id="ending" class="overlay ending" hidden>
+      <div class="story-line">AETHER CORE · RESTORED</div>
+      <h2>The city remembers<br><em>its own light.</em></h2>
+      <p>The bridges reconnect. The windows wake. Somewhere across the rooftops, another web catches the dawn.</p>
+      <button id="ending-menu" class="primary-button">RETURN TO CITY <span>→</span></button>
+    </section>
+  </main>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
