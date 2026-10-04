@@ -1,5 +1,8 @@
 # Silicon Maze: Echoes of the Web
 
+**Live app:** https://echoesoftheweb.onrender.com/
+---
+
 ## Premise
 
 A surge fractured the Aether Core and scattered six fragments across a three-district city. Swing between the Neon Docks, Frozen Rooftops, and Foundry Heights, restore three local systems, and bring the Core back online.
